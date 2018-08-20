@@ -11,16 +11,16 @@ package com.mouhamadkhalil.accov;
  */
 public class Chameneos extends Thread {
     private final Piste piste;
-    private final int id;
+    private final Identificateur id;
     private Couleur monCouleur, autreCouleur;
     
-    public Chameneos (int id, Piste p){
+    public Chameneos (Identificateur id, Piste p){
         this.piste = p;
         this.id = id;
         Couleur couleur = new Couleur();
         this.monCouleur = couleur;
     }
-    public Chameneos (int id, Piste p, Couleur c){
+    public Chameneos (Identificateur id, Piste p, Couleur c){
         this.piste = p;
         this.id = id;
         this.monCouleur = c;
@@ -29,7 +29,7 @@ public class Chameneos extends Thread {
     
     
     private void Affiche(String Message){
-        System.out.println("ID: " + id + " ,Couleur: " + monCouleur.toString() + " ,Message: " + Message);     
+        System.out.println("ID: " + id.toString() + " ,Couleur: " + monCouleur.toString() + " ,Message: " + Message);     
     }
     
     private void AllerAuMail(){

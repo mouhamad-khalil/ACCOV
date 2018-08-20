@@ -14,7 +14,7 @@ public class Piste {
     private boolean premierAppel= true;
     private boolean attendre ;
     
-    public synchronized Couleur Cooperer(int id, Couleur couleur){
+    public synchronized Couleur Cooperer(Identificateur id, Couleur couleur){
         Couleur resultat ;
             while (attendre){
                 // il faut attendre

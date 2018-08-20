@@ -6,7 +6,6 @@
 package com.mouhamadkhalil.accov;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  *
@@ -35,7 +34,7 @@ public class Main {
                 Chameneos[] fileChameneos = new Chameneos[chameneosNb];
                 Piste piste = new Piste();
                 for (int i = 0; i < chameneosNb; i++){
-                    fileChameneos[i]= new Chameneos(i, piste);
+                    fileChameneos[i]= new Chameneos(new Identificateur(i), piste);
                 }
                 for (int i = 0; i < chameneosNb; i++){
                     fileChameneos[i].start();
